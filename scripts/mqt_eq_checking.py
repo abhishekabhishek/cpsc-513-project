@@ -78,7 +78,7 @@ if __name__ == '__main__':
     benchmark_name = 'qft'
 
     # setup the range for the n_qubits to explore
-    min_qubits, max_qubits = 2, 40
+    min_qubits, max_qubits = 2, 20
     qubit_step_size = 2
 
     # string to identify this experiment

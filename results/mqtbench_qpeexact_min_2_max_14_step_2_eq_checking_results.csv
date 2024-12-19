@@ -1,0 +1,7 @@
+,n_qubits,check_time,result
+0,2,0.004183402,not_equivalent
+1,4,0.01388422,equivalent_up_to_global_phase
+2,6,0.011858296,not_equivalent
+3,8,0.013543923,not_equivalent
+4,10,0.110243968,equivalent_up_to_global_phase
+5,12,0.038144098,not_equivalent
