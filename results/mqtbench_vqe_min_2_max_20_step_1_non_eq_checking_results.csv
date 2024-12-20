@@ -1,0 +1,10 @@
+,n_qubits,check_time,result,started_simulations,performed_simulations
+0,3,0.006703345,not_equivalent,8,4
+1,4,0.008963747,not_equivalent,16,1
+2,5,0.012797446,not_equivalent,18,1
+3,6,0.010892578,not_equivalent,18,1
+4,7,0.016016826,not_equivalent,18,0
+5,8,0.017214572,not_equivalent,18,0
+6,9,0.020937286,not_equivalent,18,0
+7,10,0.018887098,not_equivalent,18,0
+8,11,0.026259684,not_equivalent,18,0

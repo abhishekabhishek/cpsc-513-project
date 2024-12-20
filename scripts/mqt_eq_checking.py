@@ -75,11 +75,11 @@ def verify_benchmark(benchmark_name: str, n_qubits: int,
 
 if __name__ == '__main__':
     # benchmark name
-    benchmark_name = 'qft'
+    benchmark_name = 'qaoa'
 
     # setup the range for the n_qubits to explore
     min_qubits, max_qubits = 2, 20
-    qubit_step_size = 2
+    qubit_step_size = 1
 
     # string to identify this experiment
     id_string = f'{benchmark_name}_min_{min_qubits}_max_{max_qubits}_step_{qubit_step_size}'
@@ -122,7 +122,7 @@ if __name__ == '__main__':
     service = QiskitRuntimeService(channel="ibm_quantum", token=IBMQ_API,
                                    instance="ibm-q/open/main")
     ibm_backend = service.backend("ibm_sherbrooke")
-    ext_timeout = 3600.
+    ext_timeout = 600.
 
     benchmark_results_dict = {'n_qubits': [], 'check_time': [], 'result': []}
     n_steps = math.floor((max_qubits-min_qubits)/qubit_step_size)
@@ -152,6 +152,8 @@ if __name__ == '__main__':
 
         if prc.exitcode is None:
             print(f'verification for {benchmark_name}_{n_qubits} unsucessful in {ext_timeout} sec.')
+            # break the loop since we cannot go any higher with increasing no. of qubits
+            break
 
     # save the result of the experiments as csv to disk
     print(result_dict, benchmark_results_dict)
