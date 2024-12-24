@@ -75,10 +75,10 @@ def verify_benchmark(benchmark_name: str, n_qubits: int,
 
 if __name__ == '__main__':
     # benchmark name
-    benchmark_name = 'qft'
+    benchmark_name = 'vqe'
 
     # setup the range for the n_qubits to explore
-    min_qubits, max_qubits = 2, 16
+    min_qubits, max_qubits = 2, 21
     qubit_step_size = 1
 
     # string to identify this experiment
